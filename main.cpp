@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <iostream>
+#include <cstdint>
+#include <assert.h>
 
-
-using namespace std;
+#include "Instruction.h"
 
 int main() {
-	cout << "Hello";
+	Instruction i = Instruction(0x4bd63000);
+	assert(i.opcode() == Opcode::MOVI);
 }
